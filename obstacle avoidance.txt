@@ -1,0 +1,6 @@
+  long duration = pulseIn(ECHO_PIN, HIGH);
+  float distance = duration * 0.034 / 2;
+
+  if (distance < 10) {
+    motorStop(); // function to stop motors
+  }

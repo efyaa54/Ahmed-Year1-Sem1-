@@ -1,0 +1,16 @@
+void loop() {
+  motorForward(); // Move forward for 2 seconds
+  delay(2000);
+
+  motorSpeedUp(); // Speed up for 1.45 seconds to go up the ramp
+  delay(1450);
+
+  motorStop(); // Stop at the top for 4 seconds
+  delay(4000);
+
+  motorSpin(); // Spin for 1.965 seconds
+  delay(1965);
+
+  motorSpeedDown(); // Speed down for 0.5 seconds
+  delay(500);
+}

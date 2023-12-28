@@ -1,0 +1,19 @@
+void loop() {
+  // Calculate the current distance
+  double distance = myEnc.read() * DISTANCE_PER_PULSE;
+
+  // Check if the target distance has been reached
+  if (distance >= TARGET_DISTANCE) {
+    // Stop the motor
+    digitalWrite(MOTOR_PIN, LOW);
+
+    // Wait for the stop duration
+    delay(3000);
+
+    // Reset the encoder count
+    myEnc.write(0);
+  } else {
+    // Move the motor
+    digitalWrite(MOTOR_PIN, HIGH);
+  }
+}

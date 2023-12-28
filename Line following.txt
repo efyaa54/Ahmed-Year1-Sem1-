@@ -1,0 +1,22 @@
+void loop() {
+  // read sensor values
+  int leftSensorValue = digitalRead(sensorLeft);
+  int rightSensorValue = digitalRead(sensorRight);
+
+  // both sensors detect white
+  if (leftSensorValue == HIGH && rightSensorValue == HIGH) {
+    forward()
+  }
+  // only the right sensor detects white
+  else if (leftSensorValue == LOW && rightSensorValue == HIGH) {
+    right()
+  }
+  // only the left sensor detects white
+  else if (leftSensorValue == HIGH && rightSensorValue == LOW) {
+    left()
+  }
+  // both sensors detect black
+  else if (leftSensorValue == LOW && rightSensorValue == LOW) {
+    stop()
+  }
+}

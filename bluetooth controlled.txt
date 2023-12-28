@@ -1,0 +1,20 @@
+void loop(){
+  if(Serial.available() > 0){ 
+    command = Serial.read(); 
+    Stop();
+    switch(command){
+    case 'F':  
+      forward();
+      break;
+    case 'B':  
+       backward();
+      break;
+    case 'L':  
+      left();
+      break;
+    case 'R':
+      right();
+      break;
+    }
+  } 
+}
